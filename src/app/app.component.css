@@ -1,0 +1,35 @@
+.container{
+  margin-top:20px;
+}
+.navbar{
+  background-color: rgb(0,96,223) !important;
+}
+.navbar-brand{
+  color:#fff;
+}
+#navbarNav{
+  justify-content: end;
+}
+#navbarNav li a{
+  margin-right:10px;
+}
+#navbarNav li a{
+  color: #566787;
+  background: #f2f2f2;
+  padding:5px 20px;
+  border-radius:5px;
+  text-decoration: none;
+  border: 1px solid #f2f2f2;
+}
+#navbarNav li a:hover,
+#navbarNav li a.active{
+  color: #f2f2f2;
+  background: #24314b;
+  border: 1px solid #24314b;
+}
+footer{
+  background: #24314b;
+  padding:50px;
+  color: #bcb7b7;
+  text-align: center;
+}

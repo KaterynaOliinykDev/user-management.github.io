@@ -1,0 +1,17 @@
+.filter-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  align-items: center;
+}
+.filter-container .title{
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.filter-container form {
+  display: flex;
+  width: 370px;
+  line-height: normal;
+  justify-content: space-between;
+}

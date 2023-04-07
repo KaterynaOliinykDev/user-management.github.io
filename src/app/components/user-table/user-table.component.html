@@ -1,0 +1,44 @@
+<app-filter-widget (filter)="onFilterChanged()"></app-filter-widget>
+
+<dx-data-grid [dataSource]="users"
+              [masterDetail]="{enabled: detailColumns.length > 0, template: 'detail' }"
+              keyExpr="id"
+              [showBorders]="true"
+              >
+
+              <dxo-paging [enabled]="true" [pageSize]="25"></dxo-paging>
+
+              <dxi-column dataField="id" caption="ID" width="50px"></dxi-column>
+              <dxi-column dataField="picture" caption="Picture" cellTemplate="cellTemplate" width="62px"></dxi-column>
+
+              <dxi-column *ngFor="let column of masterColumns"
+                [dataField]="column"
+                [caption]="column | titlecase"
+                [visible]="true">
+              </dxi-column>
+
+              <div *dxTemplate="let cell of 'cellTemplate'">
+                <img src="{{ cell.value }}" />
+              </div>
+
+              <div *dxTemplate="let user of 'detail'">
+                <div class="row">
+                  <div class="col-sm-4" *ngFor="let column of detailColumns">
+                    <strong>{{ column | titlecase }}:</strong>
+                    {{ user.data[column] }}
+                  </div>
+                </div>
+              </div>
+</dx-data-grid>
+
+
+
+
+
+
+
+
+
+
+
+
